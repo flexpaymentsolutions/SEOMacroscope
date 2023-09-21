@@ -29,6 +29,7 @@ using System.IO;
 using ZXing;
 using ZXing.Common;
 using ZXing.QrCode;
+using ZXing.Windows.Compatibility;
 
 namespace SEOMacroscope
 {

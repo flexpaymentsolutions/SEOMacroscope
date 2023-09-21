@@ -23,6 +23,7 @@
 
  */
 
+using BinaryPack;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -46,10 +47,12 @@ namespace SEOMacroscope
     {
 
       Stream SaveFileStream = File.Create( Pathname );
-      BinaryFormatter serializer = new BinaryFormatter();
+            //BinaryFormatter serializer = new BinaryFormatter();
 
-      serializer.Serialize( SaveFileStream, JobMaster );
-      SaveFileStream.Close();
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+            BinaryConverter.Serialize<MacroscopeJobMaster>(JobMaster, SaveFileStream );
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
+            SaveFileStream.Close();
 
       return;
 

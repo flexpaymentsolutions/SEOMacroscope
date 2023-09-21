@@ -26,23 +26,18 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
-using Alba.CsCss.Gfx;
 using Alba.CsCss.Style;
 
 namespace SEOMacroscope
 {
 
-  public partial class MacroscopeDocument : Macroscope
+    public partial class MacroscopeDocument : Macroscope
   {
 
     /**************************************************************************/

@@ -25,7 +25,9 @@
 
 using System;
 using System.Collections.Generic;
+using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
+using HtmlDoc = HtmlAgilityPack.HtmlDocument;
 
 namespace SEOMacroscope
 {
@@ -193,7 +195,7 @@ namespace SEOMacroscope
             continue;
           }
 
-          NodeSet = HtmlDoc.QuerySelectorAll( Expression );
+          NodeSet = (IList<HtmlNode>)HtmlDoc.DocumentNode.QuerySelectorAll( Expression );
 
           if(
             ( NodeSet != null )
@@ -267,7 +269,7 @@ namespace SEOMacroscope
 
         doc.LoadHtml( "<html><head><title>title</title></head><body></body></html>" );
 
-        HtmlNode Node = doc.QuerySelector( CssSelectorString );
+        HtmlNode Node = doc.DocumentNode.QuerySelector( CssSelectorString );
 
         IsValid = true;
 

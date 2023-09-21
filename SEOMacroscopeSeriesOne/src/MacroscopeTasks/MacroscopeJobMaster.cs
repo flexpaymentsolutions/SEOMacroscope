@@ -98,6 +98,10 @@ namespace SEOMacroscope
 
     /**************************************************************************/
 
+    public MacroscopeJobMaster ():this( MacroscopeConstants.RunTimeMode.LIVE )
+    {
+      // NO-OP
+    }
     public MacroscopeJobMaster ( MacroscopeConstants.RunTimeMode JobRunTimeMode )
     {
 

@@ -23,6 +23,7 @@
 
  */
 
+using BinaryPack;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -50,9 +51,11 @@ namespace SEOMacroscope
       if( File.Exists( Pathname ) )
       {
         Stream openFileStream = File.OpenRead( Pathname );
-        BinaryFormatter deserializer = new BinaryFormatter();
-        JobMaster = (MacroscopeJobMaster) deserializer.Deserialize( openFileStream );
-        openFileStream.Close();
+        //BinaryFormatter deserializer = new BinaryFormatter();
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+                JobMaster = BinaryConverter.Deserialize<MacroscopeJobMaster>( openFileStream );
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
+                openFileStream.Close();
       }
 
       return ( JobMaster );

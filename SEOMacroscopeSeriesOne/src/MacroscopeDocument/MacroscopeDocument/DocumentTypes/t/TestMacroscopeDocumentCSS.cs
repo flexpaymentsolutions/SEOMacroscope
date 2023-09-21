@@ -27,16 +27,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Linq;
-using System.Linq.Expressions;
 using NUnit.Framework;
-using Alba.CsCss.Gfx;
 using Alba.CsCss.Style;
 
 namespace SEOMacroscope
 {
 
-  [TestFixture]
+    [TestFixture]
   public class TestMacroscopeDocumentCSS : Macroscope
   {
 
