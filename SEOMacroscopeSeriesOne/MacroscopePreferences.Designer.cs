@@ -12,7 +12,7 @@ namespace SEOMacroscope {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.8.0.0")]
     internal sealed partial class MacroscopePreferences : global::System.Configuration.ApplicationSettingsBase {
         
         private static MacroscopePreferences defaultInstance = ((MacroscopePreferences)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new MacroscopePreferences())));
@@ -73,7 +73,7 @@ namespace SEOMacroscope {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v0.0.0.0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("v2.0.0.0")]
         public string AppVersion {
             get {
                 return ((string)(this["AppVersion"]));

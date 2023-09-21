@@ -39,49 +39,49 @@ namespace SEOMacroscope
 
     /**************************************************************************/
 
-    [Test]
-    public void TestParseVersionNumber ()
-    {
+    //[Test]
+    //public void TestParseVersionNumber ()
+    //{
 
-      MacroscopeCheckForUpdate CheckForUpdate = new MacroscopeCheckForUpdate();
-      Dictionary<string, int[]> Versions = new Dictionary<string, int[]>();
+    //  MacroscopeCheckForUpdate CheckForUpdate = new MacroscopeCheckForUpdate();
+    //  Dictionary<string, int[]> Versions = new Dictionary<string, int[]>();
 
-      Versions.Add( "1.2.3.4", new int[] { 1, 2, 3, 4 } );
-      Versions.Add( "888.888.888.888", new int[] { 888, 888, 888, 888 } );
-      Versions.Add( "123.456.789.101", new int[] { 123, 456, 789, 101 } );
+    //  Versions.Add( "1.2.3.4", new int[] { 1, 2, 3, 4 } );
+    //  Versions.Add( "888.888.888.888", new int[] { 888, 888, 888, 888 } );
+    //  Versions.Add( "123.456.789.101", new int[] { 123, 456, 789, 101 } );
 
-      foreach( KeyValuePair<string, int[]> Version in Versions )
-      {
-        int[] Parsed = CheckForUpdate.ParseVersionNumber( VersionString: Version.Key );
-        Assert.AreEqual( Version.Value, Parsed );
-      }
+    //  foreach( KeyValuePair<string, int[]> Version in Versions )
+    //  {
+    //    int[] Parsed = CheckForUpdate.ParseVersionNumber( VersionString: Version.Key );
+    //    Assert.AreEqual( Version.Value, Parsed );
+    //  }
 
-    }
+    //}
 
     /**************************************************************************/
 
-    [Test]
-    public void TestIsVersionNewer ()
-    {
+    //[Test]
+    //public void TestIsVersionNewer ()
+    //{
 
-      MacroscopeCheckForUpdate CheckForUpdate = new MacroscopeCheckForUpdate();
-      string CurrentVersion = "1.2.3.4";
-      Dictionary<string, bool> Versions = new Dictionary<string, bool>();
+    //  MacroscopeCheckForUpdate CheckForUpdate = new MacroscopeCheckForUpdate();
+    //  string CurrentVersion = "1.2.3.4";
+    //  Dictionary<string, bool> Versions = new Dictionary<string, bool>();
 
-      Versions.Add( CurrentVersion, false );
-      Versions.Add( "xxxx", false );
-      Versions.Add( "0.88.3.99", false );
-      Versions.Add( "1.3.3.4", true );
-      Versions.Add( "1.1.3.4", false );
-      Versions.Add( "10.99.17.69", true );
+    //  Versions.Add( CurrentVersion, false );
+    //  Versions.Add( "xxxx", false );
+    //  Versions.Add( "0.88.3.99", false );
+    //  Versions.Add( "1.3.3.4", true );
+    //  Versions.Add( "1.1.3.4", false );
+    //  Versions.Add( "10.99.17.69", true );
 
-      foreach( KeyValuePair<string, bool> Version in Versions )
-      {
-        bool result = CheckForUpdate.IsVersionNewer( CurrentVersion: CurrentVersion, CompareVersion: Version.Key );
-        Assert.AreEqual( Version.Value, result );
-      }
+    //  foreach( KeyValuePair<string, bool> Version in Versions )
+    //  {
+    //    bool result = CheckForUpdate.IsVersionNewer( CurrentVersion: CurrentVersion, CompareVersion: Version.Key );
+    //    Assert.AreEqual( Version.Value, result );
+    //  }
 
-    }
+    //}
 
     /**************************************************************************/
 

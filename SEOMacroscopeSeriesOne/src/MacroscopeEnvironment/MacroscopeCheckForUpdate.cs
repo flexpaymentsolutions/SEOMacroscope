@@ -42,26 +42,26 @@ namespace SEOMacroscope
 
     /**************************************************************************/
 
-    public async Task<bool> PhoneHome ()
-    {
+    //public async Task<bool> PhoneHome ()
+    //{
 
-      bool NewVersionAvailable = false;
-      MacroscopeHttpUrlLoader UrlLoader = new MacroscopeHttpUrlLoader();
-      MacroscopeHttpTwoClient Client = new MacroscopeHttpTwoClient();
-      Uri TargetUri = new Uri( MacroscopeConstants.CheckForUpdateUrl );
-      byte[] Data = await UrlLoader.LoadImmediateDataFromUrl( Client: Client, TargetUri: TargetUri );
-      string PublishedVersion = System.Text.Encoding.UTF8.GetString( Data );
-      string CurrentVersion = Macroscope.GetVersion();
-      bool CheckResult = this.IsVersionNewer( CurrentVersion: CurrentVersion, CompareVersion: PublishedVersion );
+    //  bool NewVersionAvailable = false;
+    //  MacroscopeHttpUrlLoader UrlLoader = new MacroscopeHttpUrlLoader();
+    //  MacroscopeHttpTwoClient Client = new MacroscopeHttpTwoClient();
+    //  Uri TargetUri = new Uri( MacroscopeConstants.CheckForUpdateUrl );
+    //  byte[] Data = await UrlLoader.LoadImmediateDataFromUrl( Client: Client, TargetUri: TargetUri );
+    //  string PublishedVersion = System.Text.Encoding.UTF8.GetString( Data );
+    //  string CurrentVersion = Macroscope.GetVersion();
+    //  bool CheckResult = this.IsVersionNewer( CurrentVersion: CurrentVersion, CompareVersion: PublishedVersion );
 
-      if( CheckResult )
-      {
-        NewVersionAvailable = true;
-      }
+    //  if( CheckResult )
+    //  {
+    //    NewVersionAvailable = true;
+    //  }
 
-      return ( NewVersionAvailable );
+    //  return ( NewVersionAvailable );
 
-    }
+    //}
 
     /**************************************************************************/
 

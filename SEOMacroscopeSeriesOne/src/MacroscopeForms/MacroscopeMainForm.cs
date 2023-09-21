@@ -209,59 +209,59 @@ namespace SEOMacroscope
 
       this.ScanningControlsEnable();
 
-      if( MacroscopePreferencesManager.GetAutomaticallyCheckForUpdates() )
-      {
-        this.CheckForUpdate();
-      }
+      //if( MacroscopePreferencesManager.GetAutomaticallyCheckForUpdates() )
+      //{
+      //  this.CheckForUpdate();
+      //}
 
     }
 
     /** Check For Update ******************************************************/
 
-    private async void CheckForUpdate ()
-    {
+    //private async void CheckForUpdate ()
+    //{
 
-      MacroscopeCheckForUpdate Checker = new MacroscopeCheckForUpdate();
-      DialogResult Result;
-      bool PhoneHome = false;
+    //  MacroscopeCheckForUpdate Checker = new MacroscopeCheckForUpdate();
+    //  DialogResult Result;
+    //  bool PhoneHome = false;
 
-      try
-      {
-        PhoneHome = await Checker.PhoneHome();
-      }
-      catch( Exception ex )
-      {
-        DebugMsg( string.Format( "CheckForUpdate: {0}", ex.Message ) );
-      }
+    //  try
+    //  {
+    //    PhoneHome = await Checker.PhoneHome();
+    //  }
+    //  catch( Exception ex )
+    //  {
+    //    DebugMsg( string.Format( "CheckForUpdate: {0}", ex.Message ) );
+    //  }
 
-      if( PhoneHome )
-      {
+    //  if( PhoneHome )
+    //  {
 
-        Result = MessageBox.Show(
-          "A new version of SEO Macroscope is available. Go to the downloads page of the website?",
-          "New SEO Macroscope version available",
-          MessageBoxButtons.YesNo,
-          MessageBoxIcon.Information,
-          MessageBoxDefaultButton.Button2
-        );
+    //    Result = MessageBox.Show(
+    //      "A new version of SEO Macroscope is available. Go to the downloads page of the website?",
+    //      "New SEO Macroscope version available",
+    //      MessageBoxButtons.YesNo,
+    //      MessageBoxIcon.Information,
+    //      MessageBoxDefaultButton.Button2
+    //    );
 
-        if( Result == DialogResult.Yes )
-        {
+    //    if( Result == DialogResult.Yes )
+    //    {
 
-          try
-          {
-            Macroscope.OpenUrlInBrowser( MacroscopeConstants.CheckForUpdateDownloadsUrl );
-          }
-          catch( Exception ex )
-          {
-            MessageBox.Show( ex.Message );
-          }
+    //      try
+    //      {
+    //        Macroscope.OpenUrlInBrowser( MacroscopeConstants.CheckForUpdateDownloadsUrl );
+    //      }
+    //      catch( Exception ex )
+    //      {
+    //        MessageBox.Show( ex.Message );
+    //      }
 
-        }
+    //    }
 
-      }
+    //  }
 
-    }
+    //}
 
     /** Self Destruct Sequence ************************************************/
 

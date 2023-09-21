@@ -6,7 +6,7 @@
     <PublishUrl>publish\</PublishUrl>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>2.0.0.0</ApplicationVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
@@ -31,8 +31,14 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>SEO_Macroscope_App_Icon_64x64.ico</ApplicationIcon>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="MacroscopePreferences.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MacroscopePreferences.settings</DependentUpon>
+    </Compile>
     <Compile Update="src\MacroscopeForms\MacroscopeContextMenus\MacroscopeContextMenus.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,7 +126,6 @@
     <EmbeddedResource Include="src\MacroscopeAnalysis\MacroscopeKeywordAnalysis\t\HtmlDocs\TestGoodBodyKeywords.html" />
     <EmbeddedResource Include="src\MacroscopeDocument\t\ListDocs\1000-urls.txt" />
     <EmbeddedResource Include="src\MacroscopeDocument\MacroscopeDocument\t\TextDocs\TestPureTextOutLinks001.txt" />
-    <Content Include="CheckForUpdate.txt" />
     <Content Include="SEO_Macroscope_App_Icon_64x64.ico" />
     <EmbeddedResource Include="src\MacroscopeDocument\MacroscopeDocument\DocumentTypes\t\CssDocs\TestCssDocumentBad001.css" />
     <EmbeddedResource Include="src\MacroscopeDocument\MacroscopeDocument\DocumentTypes\t\CssDocs\TestCssDocumentGood001.css" />
@@ -175,5 +180,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="src\MacroscopeAnalysis\MacroscopeKeywordAnalysis\t\TestMacroscopeIntenseKeywordAnalysis.cs" />
+    <Compile Remove="src\MacroscopeEnvironment\MacroscopeCheckForUpdate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\MacroscopeEnvironment\MacroscopeCheckForUpdate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="MacroscopePreferences.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MacroscopePreferences.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>

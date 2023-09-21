@@ -39,8 +39,8 @@ namespace SEOMacroscope
 
     /** BEGIN: Update URLs ****************************************************/
 
-    public const string CheckForUpdateUrl = "https://raw.githubusercontent.com/nazuke/SEOMacroscope/master/SEOMacroscopeSeriesOne/CheckForUpdate.txt";
-    public const string CheckForUpdateDownloadsUrl = "https://nazuke.github.io/SEOMacroscope/downloads/";
+    //public const string CheckForUpdateUrl = "https://raw.githubusercontent.com/nazuke/SEOMacroscope/master/SEOMacroscopeSeriesOne/CheckForUpdate.txt";
+    //public const string CheckForUpdateDownloadsUrl = "https://nazuke.github.io/SEOMacroscope/downloads/";
 
     /** END: Update URLs ******************************************************/
 

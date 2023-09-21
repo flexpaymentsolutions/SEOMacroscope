@@ -15,7 +15,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="AppVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">v0.0.0.0</Value>
+      <Value Profile="(Default)">v2.0.0.0</Value>
     </Setting>
     <Setting Name="CaseSensitiveTextIndexing" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
